@@ -21,5 +21,7 @@ def on_forever():
         if coin.is_touching(my_sprite):
             coin.delete()
             game.add_score(1)
+    if coin.is_touching_edge() :
+        game.game_over()
     coin.delete()    
 basic.forever(on_forever)

@@ -21,5 +21,9 @@ basic.forever(function on_forever() {
         }
         
     }
+    if (coin.isTouchingEdge()) {
+        game.gameOver()
+    }
+    
     coin.delete()
 })
