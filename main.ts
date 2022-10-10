@@ -1,4 +1,10 @@
 input.onPinPressed(TouchPin.P0, function () {
+    my_sprite.change(LedSpriteProperty.X, -1)
+})
+input.onPinPressed(TouchPin.P2, function () {
+    my_sprite.change(LedSpriteProperty.X, 1)
+})
+input.onPinPressed(TouchPin.P1, function () {
     sprite_3 = game.createSprite(my_sprite.get(LedSpriteProperty.X), 4)
     sprite_3.set(LedSpriteProperty.Brightness, 50)
     for (let index = 0; index < 4; index++) {
@@ -10,12 +16,6 @@ input.onPinPressed(TouchPin.P0, function () {
             game.addScore(1)
         }
     }
-})
-input.onButtonPressed(Button.A, function () {
-    my_sprite.change(LedSpriteProperty.X, -1)
-})
-input.onButtonPressed(Button.B, function () {
-    my_sprite.change(LedSpriteProperty.X, 1)
 })
 let sprite_2: game.LedSprite = null
 let sprite_3: game.LedSprite = null
