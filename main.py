@@ -8,7 +8,7 @@ def on_button_pressed_ab():
     sprite_3.set(LedSpriteProperty.BRIGHTNESS, 50)
     for index in range(4):
         sprite_3.change(LedSpriteProperty.Y, -1)
-        basic.pause(400)
+        basic.pause(300)
         if sprite_3.is_touching(sprite_2):
             sprite_2.delete()
             sprite_3.delete()

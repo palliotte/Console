@@ -7,7 +7,7 @@ input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
     sprite_3.set(LedSpriteProperty.Brightness, 50)
     for (let index = 0; index < 4; index++) {
         sprite_3.change(LedSpriteProperty.Y, -1)
-        basic.pause(400)
+        basic.pause(300)
         if (sprite_3.isTouching(sprite_2)) {
             sprite_2.delete()
             sprite_3.delete()
