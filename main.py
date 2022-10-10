@@ -17,7 +17,7 @@ def on_forever():
     basic.pause(200)
     for index in range(4):
         coin.change(LedSpriteProperty.Y, 1)
-        basic.pause(500)
+        basic.pause(400)
         if coin.is_touching(my_sprite):
             coin.delete()
             game.add_score(1)
