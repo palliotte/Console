@@ -168,4 +168,4 @@ def on_pin_pressed_p02(): #snake
         basic.pause(timeDelayGame)
     basic.forever(on_forever)
 
-input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p02)
+input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p02)

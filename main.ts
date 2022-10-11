@@ -58,7 +58,7 @@ input.onPinPressed(TouchPin.P1, function on_pin_pressed_p01() {
         basic.pause(300)
     })
 })
-input.onPinPressed(TouchPin.P0, function on_pin_pressed_p02() {
+input.onPinPressed(TouchPin.P2, function on_pin_pressed_p02() {
     // snake
     let checkY = 0
     let checkX = 0
