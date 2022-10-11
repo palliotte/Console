@@ -1,5 +1,5 @@
 {
-    "name": "Console MA STD",
+    "name": "Console",
     "description": "",
     "dependencies": {
         "core": "*",
