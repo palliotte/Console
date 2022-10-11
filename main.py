@@ -56,7 +56,7 @@ def on_pin_pressed_p01(): #snap the dot
         basic.pause(300)
     basic.forever(on_forever)
 input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p01)
-
+''''
 def on_pin_pressed_p02(): #snake
     checkY = 0
     checkX = 0
@@ -169,3 +169,4 @@ def on_pin_pressed_p02(): #snake
     basic.forever(on_forever)
 
 input.on_pin_pressed(TouchPin.P2, on_pin_pressed_p02)
+'''''
