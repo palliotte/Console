@@ -7,8 +7,8 @@ def on_button_pressed_ab():
     bullet = game.create_sprite(my_sprite.get(LedSpriteProperty.X), 4)
     bullet.set(LedSpriteProperty.BRIGHTNESS, 50)
     for index in range(4):
-        bullet.change(LedSpriteProperty.Y, -1)
         basic.pause(300)
+        bullet.change(LedSpriteProperty.Y, -1)
         if bullet.is_touching(ennemie):
             ennemie.delete()
             bullet.delete()

@@ -6,8 +6,8 @@ input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
     bullet = game.createSprite(my_sprite.get(LedSpriteProperty.X), 4)
     bullet.set(LedSpriteProperty.Brightness, 50)
     for (let index = 0; index < 4; index++) {
-        bullet.change(LedSpriteProperty.Y, -1)
         basic.pause(300)
+        bullet.change(LedSpriteProperty.Y, -1)
         if (bullet.isTouching(ennemie)) {
             ennemie.delete()
             bullet.delete()
