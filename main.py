@@ -1,3 +1,6 @@
+basic.show_string("0=Mars attack")
+basic.show_string("1= Snap the dot")
+
 def on_pin_pressed_p0():# mars attack
     ennemie: game.LedSprite = None
     my_sprite: game.LedSprite = None
@@ -39,7 +42,6 @@ def on_pin_pressed_p0():# mars attack
 input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
 
 def on_pin_pressed_p1():# snap the dot
-
     my_sprite = game.create_sprite(2, 2)
     game.set_score(0)
     

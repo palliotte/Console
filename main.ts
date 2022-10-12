@@ -1,3 +1,5 @@
+basic.showString("0=Mars attack")
+basic.showString("1= Snap the dot")
 input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
     //  mars attack
     let ennemie : game.LedSprite = null
