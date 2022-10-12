@@ -1,8 +1,7 @@
-let ennemie : game.LedSprite = null
-let my_sprite : game.LedSprite = null
-//  mars attack
 input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
-    
+    //  mars attack
+    let ennemie : game.LedSprite = null
+    let my_sprite : game.LedSprite = null
     my_sprite = game.createSprite(2, 4)
     game.setScore(0)
     input.onButtonPressed(Button.A, function on_button_pressed_a() {
@@ -41,9 +40,8 @@ input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
     })
 })
 input.onPinPressed(TouchPin.P1, function on_pin_pressed_p1() {
-    
     //  snap the dot
-    my_sprite = game.createSprite(2, 2)
+    let my_sprite = game.createSprite(2, 2)
     game.setScore(0)
     input.onButtonPressed(Button.A, function on_button_pressed_a2() {
         if (my_sprite.get(LedSpriteProperty.X) == 2) {
