@@ -1,5 +1,5 @@
+ennemie: game.LedSprite = None
 my_sprite: game.LedSprite = None
-my_sprite2: game.LedSprite = None
 # mars attack
 
 def on_pin_pressed_p0():
@@ -46,13 +46,13 @@ def on_pin_pressed_p0():
 input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
 
 def on_pin_pressed_p1():
-    global my_sprite2
+    global my_sprite
     # snap the dot
-    my_sprite2 = game.create_sprite(2, 2)
+    my_sprite = game.create_sprite(2, 2)
     game.set_score(0)
     
     def on_button_pressed_a2():
-        if my_sprite2.get(LedSpriteProperty.X) == 2:
+        if my_sprite.get(LedSpriteProperty.X) == 2:
             game.add_score(1)
         else:
             game.game_over()
@@ -60,8 +60,8 @@ def on_pin_pressed_p1():
     
     
     def on_forever2():
-        my_sprite2.move(1)
-        my_sprite2.if_on_edge_bounce()
+        my_sprite.move(1)
+        my_sprite.if_on_edge_bounce()
         basic.pause(300)
     basic.forever(on_forever2)
     
