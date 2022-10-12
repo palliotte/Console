@@ -29,14 +29,14 @@ def on_pin_pressed_p0():
     basic.forever(on_forever)  
 
     def on_button_pressed_ab():
-        bullet2 = game.create_sprite(my_sprite.get(LedSpriteProperty.X), 4)
-        bullet2.set(LedSpriteProperty.BRIGHTNESS, 50)
+        bullet = game.create_sprite(my_sprite.get(LedSpriteProperty.X), 4)
+        bullet.set(LedSpriteProperty.BRIGHTNESS, 50)
         for index in range(4):
             basic.pause(300)
-            bullet2.change(LedSpriteProperty.Y, -1)
-            if bullet2.is_touching(ennemie):
+            bullet.change(LedSpriteProperty.Y, -1)
+            if bullet.is_touching(ennemie):
                 ennemie.delete()
-                bullet2.delete()
+                bullet.delete()
                 game.add_score(1)
     input.on_button_pressed(Button.AB, on_button_pressed_ab)
     
