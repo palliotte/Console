@@ -1,5 +1,5 @@
-basic.show_string("0=Mars attack")
-basic.show_string("1= Snap the dot")
+basic.show_string("0=Marsattack")
+basic.show_string("1=Snapthedot")
 
 def on_pin_pressed_p0():# mars attack
     ennemie: game.LedSprite = None
