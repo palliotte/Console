@@ -10,19 +10,17 @@ input.onPinPressed(TouchPin.P0, function on_pin_pressed_p0() {
     })
     while (true) {
         ennemie = game.createSprite(randint(0, 4), 0)
-        basic.forever(function on_forever() {
-            ennemie.set(LedSpriteProperty.Brightness, 50)
-            basic.pause(200)
-            for (let index2 = 0; index2 < 4; index2++) {
-                ennemie.change(LedSpriteProperty.Y, 1)
-                basic.pause(800)
-            }
-            if (ennemie.isTouchingEdge()) {
-                game.gameOver()
-            }
-            
-            ennemie.delete()
-        })
+        ennemie.set(LedSpriteProperty.Brightness, 50)
+        basic.pause(800)
+        for (let index2 = 0; index2 < 4; index2++) {
+            ennemie.change(LedSpriteProperty.Y, 1)
+            basic.pause(800)
+        }
+        if (ennemie.isTouchingEdge()) {
+            game.gameOver()
+        }
+        
+        ennemie.delete()
     }
     input.onButtonPressed(Button.AB, function on_button_pressed_ab() {
         let bullet = game.createSprite(my_sprite.get(LedSpriteProperty.X), 4)

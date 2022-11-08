@@ -1,4 +1,5 @@
 def on_pin_pressed_p0():
+    
     my_sprite = game.create_sprite(2, 4)
     game.set_score(0)
     
@@ -13,17 +14,15 @@ def on_pin_pressed_p0():
     
     while True:
         ennemie = game.create_sprite(randint(0, 4), 0)
-        def on_forever():
-            ennemie.set(LedSpriteProperty.BRIGHTNESS, 50)
-            basic.pause(200)
-            for index2 in range(4):
-                ennemie.change(LedSpriteProperty.Y, 1)
-                basic.pause(800)
-            if ennemie.is_touching_edge():
-                game.game_over()
-            ennemie.delete()
-        basic.forever(on_forever)
-    
+        ennemie.set(LedSpriteProperty.BRIGHTNESS, 50)
+        basic.pause(800)
+        for index2 in range(4):
+            ennemie.change(LedSpriteProperty.Y, 1)
+            basic.pause(800)
+        if ennemie.is_touching_edge():
+            game.game_over()
+        ennemie.delete()
+
     def on_button_pressed_ab():
         bullet = game.create_sprite(my_sprite.get(LedSpriteProperty.X), 4)
         bullet.set(LedSpriteProperty.BRIGHTNESS, 50)
@@ -35,9 +34,11 @@ def on_pin_pressed_p0():
                 bullet.delete()
                 game.add_score(1)
     input.on_button_pressed(Button.AB, on_button_pressed_ab)
+
 input.on_pin_pressed(TouchPin.P0, on_pin_pressed_p0)
 
 def on_pin_pressed_p1():
+
     my_sprite = game.create_sprite(2, 2)
     game.set_score(0)
     
@@ -48,10 +49,10 @@ def on_pin_pressed_p1():
             game.game_over()
     input.on_button_pressed(Button.A, on_button_pressed_a2)
     
-    
     def on_forever2():
         my_sprite.move(1)
         my_sprite.if_on_edge_bounce()
         basic.pause(300)
     basic.forever(on_forever2)
+
 input.on_pin_pressed(TouchPin.P1, on_pin_pressed_p1)
